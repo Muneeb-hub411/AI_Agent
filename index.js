@@ -1,14 +1,7 @@
-import OpenAI from "openai";
-import dotenv from "dotenv";
-dotenv.config();
-const client = new OpenAI({
-  apiKey: process.env.Open_AI_API_KEY,
-});
+import ollama from "ollama";
 
-const response = await client.responses.create({
-  model: "gpt-5",
-  instructions: "You are a coding assistant that talks like a pirate",
-  input: "Are semicolons optional in JavaScript?",
+const response = await ollama.chat({
+  model: "llama3.1",
+  messages: [{ role: "user", content: "Why is the sky blue?" }],
 });
-
-console.log(response.output_text);
+console.log(response.message.content);

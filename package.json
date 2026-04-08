@@ -2,6 +2,7 @@
   "name": "ai_agent",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +11,7 @@
   "description": "",
   "dependencies": {
     "dotenv": "^17.4.1",
+    "ollama": "^0.6.3",
     "openai": "^6.33.0"
   }
 }
