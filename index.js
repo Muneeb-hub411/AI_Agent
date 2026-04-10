@@ -7,6 +7,12 @@ async function run(system_Prompt, user_prompt) {
       messages: [
         { role: "user", content: user_prompt },
         { role: "system", content: system_Prompt },
+
+        {
+          role: "developer",
+          content: "plan",
+          plan: "I will call the getWeather function for both Lahore and Islamabad to get the weather information and then provide the result to the user",
+        },
       ],
     });
     console.log(response.message.content);
